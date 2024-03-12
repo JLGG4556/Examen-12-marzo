@@ -60,4 +60,22 @@ public class UtilsValidacion {
 		else
 			return false;
 	}
+	
+	/**
+	 * Este metodo sirve para validar codigos
+	 * 
+	 * En este ejemplo las tres primeras letras empiezan por mayuscula
+	 * [A-Z][3,]. 
+	 * 
+	 * https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html#sum
+	 * 
+	 * @param str
+	 * @param exRegular
+	 * @return
+	 */
+	public static boolean isValidCode(String str, String exRegular) {
+		
+		return str.matches(exRegular);
+		
+	}
 }
